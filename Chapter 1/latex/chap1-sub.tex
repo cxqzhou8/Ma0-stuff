@@ -1,8 +1,140 @@
 \documentclass{article}
 \usepackage{amsthm}
+\usepackage{csquotes}
+\usepackage{changepage}
+\setlength{\parskip}{1em}
+
 \begin{document}
-    \section{Question 1}
+    \section*{Question 1.}
+    \subsection*{Discussion}
+    \begin{itemize}
+        \item We will show there exists an $ x $ such that $ mx + b = 0 $.
+        \item We will show that $ x $ is unique.
+    \end{itemize}
+    
+    \subsection*{Proof}
     \begin{proof}
-        Consider $ x = -\frac{b}{m} $. Then $ mx + b = m(-\frac{b}{m}) + b = -b + b = 0 $. We will now 
+        Consider $ x = -\frac{b}{m} $. Note that $ mx + b = m(-\frac{b}{m}) + b = -b + b = 0 $. Thus, there exists a real $ x $ such that $ mx + b = 0 $.
+        We will show that $ x $ is unique. Assume that both $ x $ and $ y $ satisfy $ mx + b = 0 $. Then $ mx + b = 0 = my + b $.
+        Therefore, $ mx + b = my + b $, and thus $ mx = my $, and so $ x = y $. Thus, there exists a unique $ x $ such that $ mx + b = 0 $.
     \end{proof}
+
+    \section*{Question 2.}
+    \subsection*{Discussion}
+    \begin{itemize}
+        \item We will show that $ -1 \le x \le 1 \Rightarrow x^2 \le 1 $.
+        \item We will show that $ x^2 \le 1 \Rightarrow -1 \le x \le 1 $.
+    \end{itemize}
+    
+    \subsection*{Proof}
+    \begin{proof}
+        To prove this biconditional statement, we will prove two conditional statements.
+
+        \noindent We will first show that the statement \textquote{If $ -1 \le x \le 1 $, then $ x^2 \le 1 $} is true. Assume that $ -1 \le x \le 1 $ is true.
+        Then $ x \le 1 $ and $ x \ge -1 $. Since $ x \le 1 $, $ x \cdot x \le 1 \cdot 1 \Rightarrow x^2 \le 1 $, as $ x \ge -1 $. Thus, the original statement is true.
+
+        \noindent Next we will prove the statement \textquote{If $ x^2 \le 1 $, then $ -1 \le x \le 1 $} by proving its contrapositve \textquote{If $ x < -1 $ or $ x > 1 $, then $ x^2 > 1 $.}
+        Assume that $ x < -1 \vee x > 1 $ is true. Then only one of $ x < -1 $ or $ x > 1 $ needs to be true for $ x < -1 \vee x > 1 $ to be true. 
+        Since $ x $ cannot be both greater than $ 1 $ and less than $ -1 $, only one of the statements in the compound statement can be true. 
+        If $ x < -1 $ is true, $ x \cdot x < -1 \cdot -1 \Rightarrow x^2 > 1 $. If $ x > 1 $ is true, $ x \cdot x > 1 \cdot 1 \Rightarrow x^2 > 1 $.
+        Thus, in either case the contrapositve will be true. Since we have proven the contrapositve, the original statement must also be true.
+
+        \noindent Since we proved above the two conditional statements, the biconditional statement \textquote{Let $ x $ be a real number. $ -1 \le x \le 1 $ if and only
+        if $ x^2 \le 1 $} is proven.
+        
+    \end{proof}
+
+    \section*{Question 3.}
+    \subsection*{Discussion}
+    \begin{itemize}
+        \item We will show that $ m $ and $ n $ have the same parity $ \Rightarrow m + n $ is even.
+        \item We will show that $ m + n $ is even $ \Rightarrow m $ and $ n $ have the same parity.
+    \end{itemize}
+
+    \subsection*{Proof}
+    \begin{proof}
+        To prove this biconditional statement, we will prove two conditional statements.
+
+        \noindent We will first show that the statement \textquote{If $ m $ and $ n $ have the same parity, then $ m + n $ is even} is true. Assume that $ m $ and $ n $ have the same parity. 
+        Then there are two cases to consider:
+
+        \noindent \textbf{Case 1. $ m $ and $ n $ are both even:} If $ m $ and $ n $ are both even, then they can be written as $ m = 2k $ and $ n = 2l $, for some whole numbers $ k $ and $ l $.
+        Then $ m + n = 2k + 2l = 2(k + l) $. Since $ k + l $ is also a whole number, $ m + n $ is even.
+
+        \noindent \textbf{Case 2. $ m $ and $ n $ are both odd:} If $ m $ and $ n $ are both odd, then they can be written as $ m = 2k + 1 $ and $ n = 2k + 1 $, for some whole numbers $ k $ and $ l $.
+        Then $ m + n = 2k + 1 + 2l + 1 = 2k + 2l + 2 = 2(k + l + 1) $. Since $ k + l + 1 $ is also a whole number, $ m + n $ is even.
+        
+        \noindent Thus, the statement \textquote{If $ m $ and $ n $ have the same parity, then $ m + n $ is even} is proven.
+
+        \noindent Next, we will prove the statement \textquote{If $ m + n $ is even, then $ m $ and $ n $ have the same parity.} We will instead prove its contrapositve \textquote{If $ m $ and $ n $ do not 
+        have the same parity, then $ m + n $ is odd.} Assume that $ m $ and $ n $ do not have the same parity. Then let us consider the following two cases:
+
+        \noindent \textbf{Case 1. $ m $ is even and $ n $ is odd:} If $ m $ is even and $ n $ is odd, then they can be written as $ m = 2k $ and $ n = 2l + 1 $, for some whole numbers $ k $ and $ l $. Then $ m + n = 2k + 2l + 1 = 2(k + l) + 1 $.
+        Since $ k + l $ is also a whole number, $ m + n $ is odd.
+
+        \noindent \textbf{Case 2. $ m $ is odd and $ n $ is even:} If $ m $ is odd and $ n $ is even, then they can be written as $ m = 2k + 1 $ and $ n = 2l $, for some whole numbers $ k $ and $ l $. Then $ m + n = 2k + 1 + 2l = 2(k + l) + 1 $.
+        Since $ k + l $ is also a whole number, $ m + n $ is odd.
+
+        \noindent Thus, the contrapositve \textquote{If $ m $ and $ n $ do not have the same parity, then $ m + n $ is odd} is true. Since we have proven the contrapositve, the original statement must also be true.
+
+        \noindent Since we have proved above the two conditional statements, the biconditional statement \textquote{Let $ m $ and $ n $ be whole numbers. $ m $ and $ n $ have the same parity if and only if $ m + n $ is even} is proven.
+    \end{proof}
+
+    \section*{Question 4.}
+    \subsection*{Discussion}
+    \begin{itemize}
+        \item We will show that $ m \cdot n $ is odd $ \Rightarrow m $ and $ n $ are both odd.
+        \item We will do this by proving the contrapositve statement.
+    \end{itemize}
+
+    \subsection*{Proof}
+    \begin{proof}
+        We will show that the statement \textquote{Let $ m $ and $ n $ be whole numbers. If $ m \cdot n $ is odd, then $ m $ and $ n $ are both odd} is true. We will instead prove its contrapositve \textquote{If $ m $ and $ n $ are not both odd, then $ m \cdot n $ is even.}
+        Assume that $ m $ and $ n $ are not both odd. Then, let us consider three cases:
+
+        \noindent \textbf{Case 1. $ m $ is even and $ n $ is odd:} If $ m $ is even and $ n $ is odd, then they can be written as $ m = 2k $ and $ n = 2l + 1 $, for some whole numbers $ k $ and $ l $. Then $ m \cdot n = 2k(2l + 1) = 4kl + 2k = 2(2kl + k) $. Since $ 2kl + k $ is
+        also a whole number, $ m \cdot n $ is even.
+
+        \noindent \textbf{Case 2. $ m $ is odd and $ n $ is even:} If $ m $ is odd and $ n $ is even, then they can be written as $ m = 2k + 1 $ and $ n = 2l $, for some whole numbers $ k $ and $ l $. Then $ m \cdot n = (2k + 1)(2l) = 4kl + 2l = 2(2kl + l) $. Since $ 2kl + l $ is
+        also a whole number, $ m \cdot n $ is even.
+
+        \noindent \textbf{Case 3. $ m $ and $ n $ are both even:} If $ m $ and $ n $ are both even, then they can be written as $ m = 2k $ and $ n = 2l $, for some whole numbers $ k $ and $ l $. Then $ m \cdot n = (2k)(2l) = 4kl = 2(2kl) $. Since $ 2kl $ is
+        also a whole number, $ m \cdot n $ is even.
+
+        \noindent Thus, in all three cases the contrapositve statement \textquote{If $ m $ and $ n $ are not both odd, then $ m \cdot n $ is even} is true. Since we have proven the contrapositve, the original statement must also be true.
+    \end{proof}
+
+
+    \section*{Question 5.}
+
+    \renewcommand{\labelenumi}{(\alph{enumi})}
+    \renewcommand{\labelenumii}{\arabic{enumii}.}
+    \begin{enumerate}
+        \item For the odd whole numbers $ n = -3, -1, 1, 3, 5, 7, 9 $, write $ n $ as the difference of two perfect squares.
+        \begin{enumerate}
+            \item $ n = -3 $: $ 1^2 - 2^2 = -3 $
+            \item $ n = -1 $: $ 0^2 - 1^2 = -1 $
+            \item $ n = 1 $: $ 1^2 - 0^2 = 1 $
+            \item $ n = 3 $: $ 2^2 - 1^2 = 3 $
+            \item $ n = 5 $: $ 3^2 - 2^2 = 5 $
+            \item $ n = 7 $: $ 4^2 - 3^2 = 7 $
+            \item $ n = 9 $: $ 5^2 - 4^2 = 9 $
+        \end{enumerate}
+        \item \textbf{Proposition:} Every odd whole number can be written as the difference of two perfect squares.
+    \end{enumerate}
+
+    \begin{adjustwidth}{6ex}{}
+        
+        \textbf{Discussion}
+        \begin{itemize}
+            \item We will show that an odd whole number $ n $ can be written as $ n = 2k + 1 $, for some whole number k.
+            \item We will show that $ (k + 1)^2 - k^2 = 2k + 1 $.
+        \end{itemize}
+        
+        \noindent \textbf{Proof}
+        \begin{proof}
+            Let us consider the statement \textquote{Every odd whole number can be written as the difference of two perfect squares.} Notice that for any odd whole number $ n $, $ n $ can be written as $ n = 2k + 1 $, for some whole number $ k $. Notice also that
+            the difference between the squares of $ k + 1 $ and $ k $ can be written as $ (k + 1)^2 - k^2 = k^2 + 2k + 1 - k^2 = 2k + 1 $. Since $ 2k + 1 = n $ too, we have proven the original statement.
+        \end{proof}
+    \end{adjustwidth}
 \end{document}
