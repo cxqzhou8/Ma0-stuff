@@ -1,0 +1,104 @@
+\documentclass{article}
+\usepackage{amsthm}
+\usepackage{csquotes}
+\usepackage{changepage}
+\setlength{\parskip}{1em}
+
+\begin{document}
+\section*{Question 1.}
+\subsection*{Discussion}
+\begin{itemize}
+    \item We will show that $ \overline{S \cap T} \subset \overline{S} \cup \overline{T} $.
+    \item We will show that $ \overline{S} \cup \overline{T} \subset \overline{S \cap T} $.
+\end{itemize}
+
+\subsection*{Proof}
+\begin{proof}
+    To prove that $ \overline{S \cap T} = \overline{S} \cup \overline{T} $, we will prove the following two subset inclusions:
+    $ \overline{S \cap T} \subset \overline{S} \cup \overline{T} $ and $ \overline{S} \cup \overline{T} \subset \overline{S \cap T} $.
+
+    \noindent Let us consider the first inclusion. Assume that $ x \in \overline{S \cap T} $. Thus, $ x \notin S \cap T $. Then both
+    $ x \notin S $ and $ x \notin T $ must be true. Since $ x \notin S $, $ x \in \overline{S} $. Likewise, since $ x \notin T $, $ x \in \overline{T} $.
+    Therefore, $ x \in \overline{S} \cup \overline{T} $. Thus, $ \overline{S \cap T} \subset \overline{S} \cup \overline{T} $ is true.
+
+    \noindent Let us now consider the second inclusion. Assume that $ x \in \overline{S} \cup \overline{T} $. Then $ x \in \overline{S} $ or $ x \in \overline{T} $. Since $ x \in \overline{S} $ or $ x \in \overline{T} $, it is not true that $ x \in S $ or $ x \in T $. By DeMorgan's Logic Laws, this is equivalent to $ x \notin S $ and $ x \notin T $ being true. Therefore, $ x \in \overline{S \cap T} $ must also be true.
+    Thus, $ x \in \overline{S} \cup \overline{T}  \subset \overline{S \cap T} $.
+
+    \noindent Since we have shown both inclusions to be true, then we can conclude that $ \overline{S \cap T} = \overline{S} \cup \overline{T} $.
+\end{proof}
+
+\section*{Question 2.}
+\subsection*{Discussion}
+\begin{itemize}
+    \item We will show that $ S \cap (T \cup R) \subset (S \cap T) \cup (S \cap R) $.
+    \item We will show that $ (S \cap T) \cup (S \cap R) \subset S \cap (T \cup R) $.
+\end{itemize}
+
+\subsection*{Proof}
+\begin{proof}
+    To prove that $ S \cap (T \cup R) = (S \cap T) \cup (S \cap R) $, we will prove the following two subset inclusions: $ S \cap (T \cup R) \subset (S \cap T) \cup (S \cap R) $ and $ (S \cap T) \cup (S \cap R) \subset S \cap (T \cup R) $.
+
+    \noindent Let us consider the first inclusion. Assume that $ x \in S \cap (T \cup R) $. Then $ x \in S $ and $ x \in T \cup R $. Since $ x \in T \cup R $, $ x \in T $ or $ x \in R $. If $ x \in T $ is true, then $ x \in S \cap T \subset (S \cap T) \cup (S \cap R) $.
+    Similarly, if $ x \in R $ is true, then $ x \in S \cap R \subset (S \cap T) \cup (S \cap R) $. Thus, in either case $ S \cap (T \cup R) \subset (S \cap T) \cup (S \cap R) $.
+
+    \noindent Next, let us consider the second inclusion. Assume that $ x \in (S \cap T) \cup (S \cap R) $. Then $ x \in S $ and $ x \in T $ or $ x \in S $ and $ x \in R $. Therefore, $ x \in T $ or $ x \in R $. If $ x \in T $ is true, then $ x \in S \cap T \subset S \cap (T \cup R) $.
+    If $ x \in R $ is true, then $ x \in S \cap R \subset S \cap (T \cup R) $. Thus, in either case $ (S \cap T) \cup (S \cap R) \subset S \cap (T \cup R) $.
+
+    \noindent Since we have shown both inclusions to be true, then we can conclude that $ S \cap (T \cup R) = (S \cap T) \cup (S \cap R) $.
+\end{proof}
+
+\section*{Question 3.}
+\subsection*{Discussion}
+\begin{itemize}
+    \item We will show that $ A \subset B $ and $ C \subset D \Rightarrow A \times C \subset B \times D $.
+\end{itemize}
+
+\subsection*{Proof}
+\begin{proof}
+    We will show that the statement \textquote{If $ A \subset B $ and $ C \subset D $, then $ A \times C \subset B \times D $} is true. Assume that $ A \subset B $ and $ C \subset D $. Let there be an arbitrary $ (x, y) $ such that $ (x, y) \in A \times C $. Then $ x \in A $ and $ x \in B $. Similarly, $ y \in C $ and $ y \in D $.
+    Thus, $ (x, y) \in B \times D $ is also true. Therefore, we can conclude that $ A \times C \subset B \times D $.
+\end{proof}
+
+\section*{Question 4.}
+\subsection*{Discussion}
+\begin{itemize}
+    \item We will show that $ A \times (B \cap C) \subset (A \times B) \cap (A \times C) $.
+    \item We will show that $ (A \times B) \cap (A \times C) \subset A \times (B \cap C) $.
+\end{itemize}
+
+\subsection*{Proof}
+\begin{proof}
+    To prove that $ A \times (B \cap C) = (A \times B) \cap (A \times C) $, we will prove the following two subset inclusions: 
+    \[ A \times (B \cap C) \subset (A \times B) \cap (A \times C) \mbox{ and } \]
+    \[ (A \times B) \cap (A \times C) \subset A \times (B \cap C). \]
+
+    \noindent Let us consider the first inclusion. Assume that $ (x, y) \in A \times (B \cap C) $. Then $ x \in A $. Likewise, $ y \in B \cap C $, so $ y \in B $ and $ y \in C $. Since $ x \in A \mbox{ and } y \in B $, $ (x, y) \in A \times B $. Similarly, since $ x \in A \mbox{ and } y \in C $, $ (x, y) \in A \times C $. Because $ (x, y) $ is in both
+    sets, we can conclude $ (x, y) \in (A \times B) \cap (A \times C) $. Thus, $ A \times (B \cap C) \subset (A \times B) \cap (A \times C) $.
+
+    \noindent Next, let us consider the second inclusion. Assume that $ (x, y) \in (A \times B) \cap (A \times C) $. Thus, $ (x, y) \in A \times B $ and $ (x, y) \in A \times C $. Therefore, $ x \in A $, $ y \in B $, and $ y \in C $. Since $ y \in B \mbox{ and } y \in C $, $ y \in B \cap C $. So, $ (x, y) \in A \times (B \cap C) $. Thus, $ (A \times B) \cap (A \times C) \subset A \times (B \cap C) $.
+
+    \noindent Since we have shown both inclusions to be true, we can conclude $ A \times (B \cap C) = (A \times B) \cap (A \times C) $.
+\end{proof}
+
+\section*{Question 5.}
+\subsection*{Discussion}
+\begin{itemize}
+    \item We will show that $ A \times (B \cup C) \subset (A \times B) \cup (A \times C) $.
+    \item We will show that $ (A \times B) \cup (A \times C) \subset A \times (B \cup C) $.
+\end{itemize}
+
+\subsection*{Proof}
+\begin{proof}
+    To prove that $ A \times (B \cup C) = (A \times B) \cup (A \times C) $, we will prove the following two subset inclusions: 
+    \[ A \times (B \cup C) \subset (A \times B) \cup (A \times C) \mbox{ and} \] 
+    \[ (A \times B) \cup (A \times C) \subset A \times (B \cup C). \]
+
+    \noindent Let us consider the first inclusion. Assume that $ (x, y) \in A \times (B \cup C) $. Then, $ x \in A $ and $ y \in B $ or $ y \in C $. If $ y \in B $, then $ (x, y) \in A \times B \subset (A \times B) \cup (A \times C) $. If $ y \in C $, then $ (x, y) \in A \times C \subset (A \times B) \cup (A \times C) $. Therefore, in either case $ (x, y) \in (A \times B) \cup (A \times C) $, and thus
+    $ A \times (B \cup C) \subset (A \times B) \cup (A \times C) $.
+
+    \noindent Next, let us consider the second inclusion. Assume that $ (x, y) \in (A \times B) \cup (A \times C) $. Then, $ (x, y) \in A \times B $ or $ (x, y) \in A \times C $. If $ (x, y) \in A \times B $ is true, then $ x \in A $ and $ y \in B $. Therefore, $ (x, y) \in A \times (B \cup C) $. If $ (x, y) \in A \times C $, then $ x \in A $ and $ x \in C $. Therefore, $ (x, y) \in A \times (B \cup C) $.
+    Since in both cases $ (x, y) \in A \times (B \cup C) $, we can conclude that $ (A \times B) \cup (A \times C) \subset A \times (B \cup C) $.
+
+    \noindent Because we have shown both inclusions to be true, we can conclude $ A \times (B \cup C) = (A \times B) \cup (A \times C) $.
+\end{proof}
+\end{document}
