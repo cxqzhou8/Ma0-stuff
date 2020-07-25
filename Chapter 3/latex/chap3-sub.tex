@@ -1,0 +1,32 @@
+\documentclass{article}
+\usepackage{amsthm}
+\usepackage{csquotes}
+\usepackage{changepage}
+\usepackage{amssymb}
+\setlength{\parskip}{1em}
+
+\begin{document}
+\section*{Question 1a.}
+\subsection*{Discussion}
+\begin{itemize}
+    \item We will show that $ f $ is injective.
+    \item We will show that $ f $ is surjective.
+\end{itemize}
+
+\subsection*{Proof}
+\begin{proof}
+    To show that $ f $ is bijective, we must show that it is both injective and surjective.
+
+    \noindent To prove that $ f $ is injective, let us first assume $ f(s_1) = f(s_2) $. Then, the statement can be rewritten as follows: $ ms_1 + b = ms_2 + b \Rightarrow ms_1 = ms_2 \Rightarrow s_1 = s_2 $.
+    Thus, $ f $ is injective.
+
+    \noindent Next, we will prove that $ f $ is surjective. Let $ t $ be an element in the co-domain of $ f $. Assume that there exists a pre-image in the domain $ s \in \mathbb{R} $. Then $ s $ must satisfy the equation
+    $ f(s) = ms + b = t $. Notice that if $ s = \frac{-b + t}{m} $, the equation holds. Thus, every $ t \in \mathbb{R} $ has the pre-image $ \frac{-b + t}{m} \in \mathbb{R} $.
+
+    \noindent Since we have shown $ f $ to be both injective and surjective, we can conclude that $ f $ is bijective.
+\end{proof}
+
+\section*{Question 1b.}
+
+
+\end{document}
