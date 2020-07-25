@@ -1,0 +1,36 @@
+\documentclass{article}
+\usepackage{amsmath, amssymb, amsthm}
+\newtheorem{theorem}{Theorem}
+\newtheorem{definition}{Definition}
+\newtheorem{lemma}{Lemma}
+\renewcommand\qedsymbol{$\boxtimes$}
+\begin{document}
+
+% Hi Chris!! Thanks for reading the source code!!!
+% Ok so your proofs are mostly pretty good, there's just a couple of small issues.
+% LaTeX wise, use the \newtheorem command included in the amsthm package to define theorem environemts, you can see how I did it above for reference (looks like you already got the proof environment down).
+% Definining paragraph breaks without indents and to add a newline is OK, but most people are fine with the default look (unless you aren't, that's cool too).
+% You could also put \\ (\newline) followed by an empty line and \noindent the following paragraph for the same effect without changing your global settings.
+% 
+% About your proof: the biggest issue is with the second inclusion. The goal of the proof is to prove De Morgan's Laws (for sets), which is equivalent to De Morgan's Laws (for logic). You used De Morgan's Logic Laws to prove it! Which means you used the theorem to prove the theorem itself.
+% It's ok, I made the same assumption mistake on one of Brand's exams (lost me 15 points on a 10 point proof). Just keep in mind what you're assuming and what you're trying to prove when writing proofs.
+% Other than that your proofs are solid! You can use my writing style as a reference— remember when writing proofs, the shorter and more concise they are the better.
+% 
+% Let me know if you want feedback/proofs for your other proofs! I'll be happy to write something up, it's a lot of fun writing feedback and just TeXing things in general, so don't hesitate to let me know if you need help or something. 
+
+\begin{theorem}[De Morgan's Laws]
+     Let $S$ and $T$ be sets. Then 
+     \[
+     \overline{S \cap  T} = \overline{S} \cup \overline{T}.
+     \]
+\end{theorem}
+
+\begin{proof}
+    We want to show that $\overline{S \cap T} \subset \overline{S} \cup \overline{T}$ and $\overline{S} \cup \overline{T} \subset \overline{S \cap T}.$ 
+    Let $x \in \overline{S \cap T},$ then $x \notin S \cap T$ which implies $x \notin S$ and $x \notin T$. Therefore  $x \in \overline{S}$ and $x \in \overline{T}$ by definition, so $x \in \overline{S} \cup \overline{T}.$
+
+    Now let $x \in \overline{S} \cup \overline{T}.$ By way of contradiction, assume that $x \notin \overline{S \cap T}.$ We have $x \in \overline{S}$ or $x \in \overline{T }$ which implies that $x \notin S$ or $x \notin T$ by assumption. But since $x \notin \overline{S \cap T}$, $x \in S \cap T$ which implies that $x \in S$ and $x \in T$, a contradiction. So $x \in \overline{S \cap T}$, and we are done.
+
+\end{proof}
+    
+\end{document}
