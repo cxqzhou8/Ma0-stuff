@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1595641528 "c:/Users/czhou/Documents/School/Caltech/Ma 0/Chapter 3/latex/chap3-sub.tex" "c:/Users/czhou/Documents/School/Caltech/Ma 0/Chapter 3/latex/chap3-sub.pdf" "chap3-sub" 1595641528
+["pdflatex"] 1595981267 "c:/Users/czhou/Documents/School/Caltech/Ma 0/Chapter 3/latex/chap3-sub.tex" "c:/Users/czhou/Documents/School/Caltech/Ma 0/Chapter 3/latex/chap3-sub.pdf" "chap3-sub" 1595981268
   "C:/Users/czhou/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm1000.pk" 1594684921 11548 66938044fb8c00541d6379c236b0dc05 ""
   "C:/Users/czhou/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1594678290 10020124 e9f53c5ff96562aa78a32cddd3d674fa ""
   "C:/Users/czhou/AppData/Local/MiKTeX/pdftex/config/pdftex.map" 1594762270 80909 eab91d9745dd2edfd62a31d53cd5fe15 ""
@@ -11,9 +11,11 @@
   "C:/Users/czhou/AppData/Local/Programs/MiKTeX/fonts/tfm/public/amsfonts/symbols/msbm10.tfm" 1233955454 908 2921f8a10601f252058503cc6570e581 ""
   "C:/Users/czhou/AppData/Local/Programs/MiKTeX/fonts/tfm/public/amsfonts/symbols/msbm5.tfm" 1233955454 940 75ac932a52f80982a9f8ea75d03a34cf ""
   "C:/Users/czhou/AppData/Local/Programs/MiKTeX/fonts/tfm/public/amsfonts/symbols/msbm7.tfm" 1233955454 940 228d6584342e91276bf566bcf9716b83 ""
+  "C:/Users/czhou/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmbx10.tfm" 1136768653 1328 c834bbb027764024c09d3d2bf908b5f0 ""
   "C:/Users/czhou/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmbx12.tfm" 1136768653 1324 c910af8c371558dc20f2d7822f66fe64 ""
   "C:/Users/czhou/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmr12.tfm" 1136768653 1288 655e228510b4c2a1abe905c368440826 ""
   "C:/Users/czhou/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmti10.tfm" 1136768653 1480 aa8e34af0eb6a2941b776984cf1dfdc4 ""
+  "C:/Users/czhou/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb" 1247596666 34811 78b52f49e893bcba91bd7581cdc144c0 ""
   "C:/Users/czhou/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb" 1247596666 32080 340ef9bf63678554ee606688e7b5339d ""
   "C:/Users/czhou/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb" 1247596667 36299 5f9df58c2139e7edcf37c8fca4bd384d ""
   "C:/Users/czhou/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb" 1247596667 36281 c355509802a035cadc5f15869451dcee ""
@@ -37,13 +39,13 @@
   "C:/Users/czhou/AppData/Local/Programs/MiKTeX/tex/latex/etoolbox/etoolbox.sty" 1569083170 45259 743c52a37a6e5ed83cfe0e128b2da10d ""
   "C:/Users/czhou/AppData/Local/Programs/MiKTeX/tex/latex/graphics/keyval.sty" 1580750142 2677 e3b24ff953e5b58d924f163d25380312 ""
   "C:/Users/czhou/AppData/Local/Programs/MiKTeX/tex/latex/l3backend/l3backend-pdfmode.def" 1593424850 24606 ecae4e851ce9ce4554d156050e5057f9 ""
-  "c:/Users/czhou/Documents/School/Caltech/Ma 0/Chapter 3/latex/chap3-sub.aux" 1595641528 8 a94a2480d3289e625eea47cd1b285758 ""
-  "c:/Users/czhou/Documents/School/Caltech/Ma 0/Chapter 3/latex/chap3-sub.tex" 1595641521 1299 7fd43613d3378798432590ee85f60937 ""
-  "chap3-sub.aux" 1595641528 8 a94a2480d3289e625eea47cd1b285758 "pdflatex"
-  "chap3-sub.tex" 1595641521 1299 7fd43613d3378798432590ee85f60937 ""
+  "c:/Users/czhou/Documents/School/Caltech/Ma 0/Chapter 3/latex/chap3-sub.aux" 1595981267 8 a94a2480d3289e625eea47cd1b285758 ""
+  "c:/Users/czhou/Documents/School/Caltech/Ma 0/Chapter 3/latex/chap3-sub.tex" 1595981266 4511 46c315da99ba4e2f35fe36866f43d65e ""
+  "chap3-sub.aux" 1595981267 8 a94a2480d3289e625eea47cd1b285758 "pdflatex"
+  "chap3-sub.tex" 1595981266 4511 46c315da99ba4e2f35fe36866f43d65e ""
   (generated)
+  "c:/Users/czhou/Documents/School/Caltech/Ma 0/Chapter 3/latex/chap3-sub.pdf"
   "chap3-sub.aux"
   "chap3-sub.pdf"
   "c:/Users/czhou/Documents/School/Caltech/Ma 0/Chapter 3/latex/chap3-sub.log"
-  "c:/Users/czhou/Documents/School/Caltech/Ma 0/Chapter 3/latex/chap3-sub.pdf"
   "chap3-sub.log"

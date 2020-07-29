@@ -27,6 +27,69 @@
 \end{proof}
 
 \section*{Question 1b.}
+\noindent Since $ f $ is a bijection, it is invertible. The inverse $ f^{-1}(x) = \frac{1}{m}(x - b) $. We can confirm this by noting that
+\[
+    f^{-1}(f(x)) = \frac{1}{m}(mx + b - b) = \frac{1}{m}(mx) = x.
+\]
 
+\section*{Question 2.}
+\subsection*{Discussion}
+\begin{itemize}
+    \item We will show that $ f $ is injective.
+    \item We will show that $ f $ is surjective.
+\end{itemize}
+
+\subsection*{Proof}
+\begin{proof}
+    To show that $ f $ is bijective, we must show that it is both injective and surjective.
+
+    \noindent First, we will prove that $ f $ is injective. Assume that $ f(s_1) = f(s_2) $. Notice that the statement can be rewritten as follows:
+    \[
+        \frac{\gamma s_1 + 1}{s_1 + \rho} = \frac{\gamma s_2 + 1}{s_2 + \rho} \Rightarrow (\gamma s_1 + 1)(s_2 + \rho) = (\gamma s_2 + 1)(s_1 + \rho) \Rightarrow
+    \]
+    \[
+        \gamma s_1 s_2 + \gamma s_1 p + s_2 + \rho = \gamma s_1 s_2 + \gamma s_2 \rho + s_1 + \rho \Rightarrow \gamma s_1 \rho + s_2 = \gamma s_2 \rho + s_1 \Rightarrow
+    \]
+    \[
+        s_2 - \gamma s_2 \rho = s_1 - \gamma s_1 \rho \Rightarrow s_2 (1 - \gamma \rho) = s_1 (1 - \gamma \rho) \Rightarrow s_2 = s_1.
+    \]
+    Since when $ f(s_1) = f(s_2) $, $ s_1 = s_2 $, we can conclude that $ f $ is injective.
+
+    \noindent Next, we will prove that $ f $ is bijective. Let $ t \in \mathbb{R}-\{\gamma\} $ be an element in the co-domain of $ f $. Assume that there exists a pre-image in the domain $ s \in \mathbb{R}-\{-\rho\} $.
+    Then $ s $ must satisfy the equation $ f(s) = \frac{\gamma s + 1}{s + \rho} = t $. To obtain the solution, we will solve for $ s $:
+    \[
+        \frac{\gamma s + 1}{s + \rho} = t \Rightarrow \gamma s + 1 = t (s + \rho) \Rightarrow \gamma s + 1 = st + \rho t \Rightarrow \gamma s - st = \rho t - 1 \Rightarrow
+    \]
+    \[
+        s (\gamma - t) = \rho t - 1 \Rightarrow s = \frac{\rho t - 1}{\gamma - t}.
+    \]
+    Thus, every $ t \in \mathbb{R}-\{\gamma\} $ has the pre-image $ \frac{\rho t - 1}{\gamma - t} \in \mathbb{R}-\{-\rho\} $.
+
+    \noindent Since we have proven that $ f $ is both injective and surjective, we can conclude that $ f $ is a bijection.
+\end{proof}
+
+\section*{Question 3.}
+\subsection*{Discussion}
+\begin{itemize}
+    \item \textbf{What we know:} Since $ g \circ f $ is injective, when $ g(f(s_1)) = g(f(s_2)) $, $ f(s_1) = f(s_2) $.
+    \item We will show that if $ g \circ f $ is injective, then $ f $ is injective.
+\end{itemize}
+
+\subsection*{Proof}
+\begin{proof}
+    Let us consider the statement \textquote{If $ g \circ f $ is injective, then $ f $ is injective.} Assume that $ g \circ f $ is injective. Then, by the definition of injectivity, when $ g(f(s_1)) = g(f(s_2)) $, $ f(s_1) = f(s_2) $. Let us assume
+    that $ f $ is not injective. Therefore, when $ f(s_1) = f(s_2) $, $ s_1 \neq s_2 $. However, notice that if $ s_1 \neq s_2 $ and $ f(s_1) = f(s_2) $, then $ g \circ f $ is not injective --- a contradiction. Thus, $ f $ must be injective.
+\end{proof}
+
+\section*{Question 4a.}
+\subsection*{Discussion}
+\begin{itemize}
+    \item \textbf{What we know:} Let $ a \in \mathbb{R} $ and $$. Then 
+\end{itemize}
+
+\subsection*{Proof}
+\begin{proof}
+    
+\end{proof}
 
 \end{document}
