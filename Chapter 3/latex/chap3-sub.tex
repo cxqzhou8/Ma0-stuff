@@ -84,12 +84,46 @@
 \section*{Question 4a.}
 \subsection*{Discussion}
 \begin{itemize}
-    \item \textbf{What we know:} Let $ a \in \mathbb{R} $ and $$. Then 
+    \item \textbf{What we know:} Let $ a \in \mathbb{R} $ and $ f : \mathbb{R} \rightarrow \mathbb{R} $ given by $ f(x) = a $. Then 
+    \[
+        \int_{0}^{1} f(x) dx = \int_{0}^{1} a dx = ax \Bigr|_{0}^{1} = a - 0 = a.
+    \]
+    \item We will show that $ \varphi $ is surjective.
 \end{itemize}
 
 \subsection*{Proof}
 \begin{proof}
-    
+    We will show that $ \varphi $ is surjective. Let $ a \in \mathbb{R} $ be an element in the co-domain of $ \varphi $. Assume that there exists a pre-image in the domain $ f \in C([0, 1]) $. Then $ f $ must satisfy the equation
+    \[
+        \varphi(f) = \int_{0}^{1} f(x) dx = a.
+    \]
+    Notice that if $ f(x) = a $, then the equation holds, as
+    \[
+        \int_{0}^{1} f(x) dx = \int_{0}^{1} a dx = ax \Bigr|_{0}^{1} = a - 0 = a.
+    \]
+    Also note that since $ f(x) = a $ is continuous for all $ x \in \mathbb{R} $, $ f \in C([0, 1]) $. Thus, every $ a \in \mathbb{R} $ has the pre-image $ f(x) = a \in C([0, 1]) $.
 \end{proof}
 
+\section*{Question 4b.}
+\subsection*{Discussion}
+\begin{itemize}
+    \item \textbf{What we know:} Consider the element $ \frac{1}{3} $ in the co-domain of the function $ \varphi $. If $ f(x) = \frac{1}{3} $ and $ g(x) = x^2 $, then 
+    \[
+        \varphi(f) = \int_{0}^{1} f(x)dx = \frac{1}{3}x \Bigr|_{0}^{1} = \frac{1}{3} = \frac{1}{3} x^3 \Bigr|_{0}^{1} = \int_{0}^{1} x^2 dx = \varphi(g).
+    \]
+    \item We will show that the function $ \varphi $ is not injective.
+\end{itemize} 
+
+\subsection*{Proof}
+\begin{proof}
+    To prove that $ \varphi $ is not injective, let us first assume the contrary, that $ \varphi $ is injective. Let $ f(x) = \frac{1}{3} $ and $ g(x) = x^2 $ be functions in the domain of $ \varphi $. Observe that
+    \[
+        \varphi(f) = \int_{0}^{1} f(x) dx = \frac{1}{3}x \Bigr|_{0}^{1} = \frac{1}{3}.
+    \]
+    Also notice that
+    \[
+        \varphi(g) = \int_{0}^{1} g(x) dx = \frac{1}{3} x^3 \Bigr|_{0}^{1} = \frac{1}{3}.
+    \]
+    Since $ \varphi(f) = \varphi(g) $, but $ f \neq g $, $ \varphi $ cannot be injective.
+\end{proof}
 \end{document}
