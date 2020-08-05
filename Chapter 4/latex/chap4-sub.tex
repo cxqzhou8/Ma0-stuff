@@ -7,5 +7,77 @@
 
 \begin{document}
 \section*{Question 1.}
+\begin{proof}
+    To show that the biconditional statement is true, we will prove two conditional statements.
+
+    \noindent We will first prove the statement \textquote{If $ 4 \mid a^2 - b^2 $, then $ a $ and $ b $ are of the same parity} by proving its contrapositive \textquote{If $ a $ and $ b $ are not of the same parity, then $ 4 \nmid a^2 - b^2 $.}
+    Let us consider two cases:
+    
+    \noindent \textbf{Case 1. $ a $ is even and $ b $ is odd:} If $ a $ is even and $ b $ is odd, then they can be written as $ a = 2k $ and $ b = 2l + 1 $ for some $ k, l \in \mathbb{Z} $. Notice that $ a^2 - b^2 $ can be rewritten as
+    \[
+        (2k)^2 - (2l + 1)^2 = 4k^2 - 4l^2 - 4l - 1 = 4(k^2 - l^2 - l) - 1.
+    \]
+
+    \noindent \textbf{Case 2. $ a $ is odd and $ b $ is even:} If $ a $ is odd and $ b $ is even then they can be written as $ a = 2k + 1 $ and $ b = 2l $ for some $ k, l \in \mathbb{Z} $. Observe that $ a^2 - b^2 $ can be rewritten as
+    \[
+        (2k + 1)^2 - (2l)^2 = 4k^2 + 4k + 1 - 4l^2 = 4(k^2 + k - l^2) + 1. 
+    \]
+
+    \noindent Thus, in both cases, $ 4 \nmid a^2 - b^2 $.
+
+    \noindent Next, we will prove the statement \textquote{If $ a $ and $ b $ are of the same parity, then $ 4 \mid a^2 - b^2 $.} Let us consider two cases:
+
+    \noindent \textbf{Case 1. $ a $ and $ b $ are both even:} If $ a $ and $ b $ are both even, then they can be written as $ a = 2k $ and $ b = 2l $ for some $ k, l \in \mathbb{Z} $. Note that $ a^2 - b^2 $ can be rewritten as
+    \[
+        (2k)^2 - (2l)^2 = 4k^2 - 4l^2 = 4(k^2 - l^2).
+    \]
+
+    \noindent \textbf{Case 2. $ a $ and $ b $ are both odd:} If $ a $ and $ b $ are both odd, then they can be written as $ a = 2k + 1 $ and $ b = 2l + 1 $ for some $ k, l \in \mathbb{Z} $. Note that $ a^2 - b^2 $ can be rewritten as
+    \[
+        (2k + 1)^2 - (2l + 1)^2 = 4k^2 + 4k + 1 - 4l^2 - 4l - 1 = 4k^2 + 4k - 4l^2 - 4l = 4(k^2 + k - l^2 - l).
+    \]
+
+    \noindent Thus, in both cases, $ 4 \mid a^2 - b^2 $.
+
+    \noindent Since we have shown both conditional statements are true, we can conclude that the biconditional statement is true.
+\end{proof}
+
+\section*{Question 2a.}
+\begin{proof}
+    To prove the biconditional statement, we must prove two conditional statements.
+
+    \noindent Let us first show that the statement \textquote{If $ 3 \mid a $, then $ 3 \mid a^2 $} is true. Assume that $ 3 \mid a $. Then $ a $ can be written as $ a = 3k $ for some $ k \in \mathbb{Z} $. Notice then that $ a^2 $ can be written as $ a^2 = 9k^2 = 3(3k^2) $. Thus, $ 3 \mid a^2 $.
+
+    \noindent Next, we will prove the statement \textquote{If $ 3 \mid a^2 $, then $ 3 \mid a $} by proving its contrapositive \textquote{If $ 3 \nmid a $, then $ 3 \nmid a^2 $}. Assume that $ 3 \nmid a $. Then $ a $ can be written as either $ a = 3k + 1 $ or $ a = 3k + 2 $ for some $ k \in \mathbb{Z} $. Therefore, there are two cases to consider:
+
+    \noindent \textbf{Case 1. $ a = 3k + 1 $:} If $ a = 3k + 1 $, then $ a^2 = 9k^2 + 6k + 1 = 3(3k^2 + 2k) + 1 $.
+
+    \noindent \textbf{Case 2. $ a = 3k + 2 $:} If $ a = 3k + 2 $, then $ a^2 = 9k^2 + 12k + 4 = 3(3k^2 + 4k) + 4 $.
+
+    \noindent Thus, in either case, $ 3 \nmid a^2 $.
+
+    \noindent Since we have proven both conditional statements, the biconditional statement is proven.
+\end{proof}
+
+\section*{Question 2b.}
+\begin{proof}
+    To show that $ \sqrt{3} $ is irrational, let us first assume the contrary, that $ \sqrt{3} $ is rational. If $ \sqrt{3} $ is rational, then it can be written as 
+    \[ \sqrt{3} = \frac{p}{q} \]
+    where $ p $ and $ q $ have no common divisors. Squaring both sides, we obtain
+    \[ 3 = \frac{p^2}{q^2}. \] 
+    This is equivalent to $ 3q^2 = p^2 $. Since $ 3 \mid p^2 $, $ 3 \mid p $. Thus, $ p $ can be written as $ p = 3k $ for some $ k \in \mathbb{Z} $. Substituting, $ 3q^2 = (3k)^2 = 9k^2 \Rightarrow q^2 = 3k^2 $. Notice that $ 3 \mid q^2 $, thus $ 3 \mid q $.
+    Since both $ p $ and $ q $ are divisible by $ 3 $, this contradicts the original assumption that $ p $ and $ q $ have no common divisors.
+
+    \noindent So, our initial assumption that $ \sqrt{3} $ is rational must be false, thus we can conclude that $ \sqrt{3} $ is irrational.
+\end{proof}
+
+\section*{Question 3.}
+\begin{proof}
+    We will show that the statement \textquote{If $ a + b $ is rational, then $ a $ is irrational or $ b $ is rational} is true by proving its contrapositive \textquote{If $ a $ is rational and $ b $ is irrational, then $ a + b $ is irrational.} Let us first assume the contrary, that $ a + b $ is rational. Notice that we can subtract $ a $ from $ a + b $, yielding
+    \[
+        a - a + b = 0 + b = b.
+    \]
+    Since $ a $ is a rational number, it is closed under additive inverses, thus $ 0 $ is also a rational number. However, $ 0 + b = b $, an irrational number, which contradicts the original assumption. Therefore, if $ a $ is rational and $ b $ is irrational, then $ a + b $ is irrational.
+\end{proof}
 
 \end{document}
