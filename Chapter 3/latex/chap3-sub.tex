@@ -51,9 +51,11 @@
         \gamma s_1 s_2 + \gamma s_1 p + s_2 + \rho = \gamma s_1 s_2 + \gamma s_2 \rho + s_1 + \rho \Rightarrow \gamma s_1 \rho + s_2 = \gamma s_2 \rho + s_1 \Rightarrow
     \]
     \[
-        s_2 - \gamma s_2 \rho = s_1 - \gamma s_1 \rho \Rightarrow s_2 (1 - \gamma \rho) = s_1 (1 - \gamma \rho) \Rightarrow s_2 = s_1.
+        s_2 - \gamma s_2 \rho = s_1 - \gamma s_1 \rho \Rightarrow  s_2 (1 - \gamma \rho) = s_1 (1 - \gamma \rho) \Rightarrow s_2 = s_1.
     \]
-    Since when $ f(s_1) = f(s_2) $, $ s_1 = s_2 $, we can conclude that $ f $ is injective.
+    Notice above that since $ \gamma \rho \neq 1 $, we are able to divide both sides by $ 1 - \gamma \rho $.
+    
+    \noindent Since when $ f(s_1) = f(s_2) $, $ s_1 = s_2 $, we can conclude that $ f $ is injective.
 
     \noindent Next, we will prove that $ f $ is bijective. Let $ t \in \mathbb{R}-\{\gamma\} $ be an element in the co-domain of $ f $. Assume that there exists a pre-image in the domain $ s \in \mathbb{R}-\{-\rho\} $.
     Then $ s $ must satisfy the equation $ f(s) = \frac{\gamma s + 1}{s + \rho} = t $. To obtain the solution, we will solve for $ s $:
@@ -63,7 +65,18 @@
     \[
         s (\gamma - t) = \rho t - 1 \Rightarrow s = \frac{\rho t - 1}{\gamma - t}.
     \]
-    Thus, every $ t \in \mathbb{R}-\{\gamma\} $ has the pre-image $ \frac{\rho t - 1}{\gamma - t} \in \mathbb{R}-\{-\rho\} $.
+    
+    \noindent Notice that substituting $ s $ into $ f $ yields
+    \[
+        f(s) = \frac{\gamma \frac{\rho t - 1}{\gamma - t} + 1}{\frac{\rho t - 1}{\gamma - t} + \rho} = \frac{\frac{\gamma \rho t - \gamma}{\gamma - t} + \frac{\gamma - t}{\gamma - t}}{\frac{\rho t - 1}{\gamma - t} + \frac{\rho (\gamma - t)}{\gamma - t}} = \frac{\frac{t (\gamma \rho - 1)}{\gamma - t}}{\frac{\gamma \rho - 1}{\gamma - t}} = t.
+    \]
+    To verify that the pre-image $ \frac{\rho t - 1}{\gamma - t} \neq -\rho $, we will solve the following equation:
+    \[
+        \frac{\rho t - 1}{\gamma - t} = -\rho \Rightarrow \rho t - 1 = -\gamma \rho + \rho t \Rightarrow \gamma \rho = 1.
+    \]
+    Since $ \gamma \rho \neq 1 $, the pre-image will always be in the domain of $ f $.
+
+    \noindent Thus, every $ t \in \mathbb{R}-\{\gamma\} $ has the pre-image $ \frac{\rho t - 1}{\gamma - t} \in \mathbb{R}-\{-\rho\} $.
 
     \noindent Since we have proven that $ f $ is both injective and surjective, we can conclude that $ f $ is a bijection.
 \end{proof}
@@ -71,14 +84,14 @@
 \section*{Question 3.}
 \subsection*{Discussion}
 \begin{itemize}
-    \item \textbf{What we know:} Since $ g \circ f $ is injective, when $ g(f(s_1)) = g(f(s_2)) $, $ f(s_1) = f(s_2) $.
+    \item \textbf{What we know:} Since $ g \circ f $ is injective, when $ g(f(s_1)) = g(f(s_2)) $, $ s_1 = s_2 $.
     \item We will show that if $ g \circ f $ is injective, then $ f $ is injective.
 \end{itemize}
 
 \subsection*{Proof}
 \begin{proof}
-    Let us consider the statement \textquote{If $ g \circ f $ is injective, then $ f $ is injective.} Assume that $ g \circ f $ is injective. Then, by the definition of injectivity, when $ g(f(s_1)) = g(f(s_2)) $, $ f(s_1) = f(s_2) $. Let us assume
-    that $ f $ is not injective. Therefore, when $ f(s_1) = f(s_2) $, $ s_1 \neq s_2 $. However, notice that if $ s_1 \neq s_2 $ and $ f(s_1) = f(s_2) $, then $ g \circ f $ is not injective --- a contradiction. Thus, $ f $ must be injective.
+    Let us consider the statement \textquote{If $ g \circ f $ is injective, then $ f $ is injective.} Assume that $ g \circ f $ is injective. Then, by the definition of injectivity, when $ g(f(s_1)) = g(f(s_2)) $, $ s_1 = s_2 $. Let us also assume, to the contrary,
+    that $ f $ is not injective. Therefore, when $ f(s_1) = f(s_2) $, $ s_1 \neq s_2 $. However, notice that if $ s_1 \neq s_2 $ and $ f(s_1) = f(s_2) $, then $ g \circ f $ is not injective because it maps two different inputs $ s_1, s_2 $ to the same output --- a contradiction. Thus, $ f $ must be injective.
 \end{proof}
 
 \section*{Question 4a.}
