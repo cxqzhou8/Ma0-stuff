@@ -3,8 +3,182 @@
 \usepackage{csquotes}
 \usepackage{changepage}
 \usepackage{amssymb}
+\usepackage{physics}
 \setlength{\parskip}{1em}
 
 \begin{document}
 \section*{Question 1.}
+
+\noindent Let $ \alpha, \beta \in \mathbb{R}. $ Notice that $ e^{i(\alpha + \beta)} = e^{ia} \cdot e^{ib} $. Therefore, we can obtain the following:
+\[
+    \cos(\alpha + \beta) + i\sin(\alpha + \beta) = (\cos\alpha + i\sin\alpha) \cdot (\cos\beta + i\sin\beta) \Rightarrow
+\]
+\[
+    \cos(\alpha + \beta) + i\sin(\alpha + \beta) = \cos\alpha\cos\beta + i\cos\alpha\sin\beta + i\sin\alpha\cos\beta + i^2\sin\alpha\sin\beta \Rightarrow
+\]
+\[
+    \cos(\alpha + \beta) + i\sin(\alpha + \beta) = \cos\alpha\cos\beta - \sin\alpha\sin\beta + i(\cos\alpha\sin\beta + \sin\alpha\cos\beta)
+\]
+
+\noindent For two complex numbers to be equal to each other, their real and imaginary components must be equal. Thus, we obtain the following two angle-sum formulae:
+\[
+    \cos(\alpha + \beta) = \cos\alpha\cos\beta - \sin\alpha\sin\beta
+\]
+\[
+    \sin(\alpha + \beta) = \sin\alpha\cos\beta + \sin\beta\cos\alpha.
+\]
+
+\section*{Question 2a.}
+\begin{proof}
+    To prove the biconditional statement, we will prove two conditional statements.
+
+    \noindent Let us first consider the statement \textquote{If $ \abs*{z} = \Re(z) $, then $ z $ is a non-negative real number.} Let $ z = a + bi $, for $ a, b \in \mathbb{R} $. Assume that $ \abs{z} = \Re(z) $. Then
+    \[
+        \sqrt{a^2 + b^2} = a \Rightarrow a^2 + b^2 = a^2 \Rightarrow b^2 = 0 \Rightarrow b = 0.
+    \]
+    Therefore, $ z \in \mathbb{R} $. Note that since $ \abs*{z} \geq 0 $, $ z $ must also be non-negative.
+
+    \noindent Let us next consider \textquote{If $ z $ is a non-negative real number, then $ \abs*{z} = \Re(z) $.} Assume that $ z \in \mathbb{R} $ and non-negative. Then $ z $ can be written as $ z = a + 0i $, for $ a \in \mathbb{R} $ and $ a \geq 0 $. Notice that
+    \[
+        \abs*{z} = \sqrt{a^2 + b^2} = \sqrt{a^2 + 0^2} = a = \Re(z).
+    \]
+
+    \noindent Thus, since we have proven both conditional statements, we can conclude that the biconditional statement must be true.
+\end{proof}
+
+\section*{Question 2b.}
+\begin{proof}
+    To prove this biconditional statement, we will prove two conditional statements.
+
+    \noindent Let us first show that \textquote{If $ (\overline{z})^2 = z^2 $, then $ z $ is purely real or purely imaginary.} Let $ z = a + bi $ for $ a, b \in \mathbb{R} $. Assume that $ (\overline{z})^2 = z^2 $. Then $ (a - bi)^2 = (a + bi)^2 $. Expanding this, we obtain
+    \[
+        a^2 - 2abi - b^2 = a^2 + 2abi - b^2 \Rightarrow -2abi = 2abi.
+    \]
+    Since $ a $ or $ b $ must be $ 0 $ for $ -2abi = 2abi $ to hold, there are three cases to consider:
+
+    \noindent \textbf{Case 1. $ a = 0 $ and $ b \neq 0 $ :} If $ a = 0 $ and $ b \neq 0 $, the condition $ -2abi = 2abi $ is satisfied. Then $ z = 0 + bi = bi $ and must be purely imaginary.
+
+    \noindent \textbf{Case 2. $ a \neq 0 $ and $ b = 0 $:} If $ a \neq 0 $ and $ b = 0 $, the condition $ -2abi = 2abi $ is satisfied. Then $ z = a + 0i = a $ and must be purely real.
+
+    \noindent \textbf{Case 3. $ a = 0 $ and $ b = 0 $:} If $ a = 0 $ and $ b = 0 $, the condition $ -2abi = 2abi $ is satisfied. Then $ z = 0 + 0i = 0 $ and must be purely real.
+
+    \noindent Therefore, we have proven the statement \textquote{If $ (\overline{z})^2 = z^2 $, then $ z $ is purely real or purely imaginary.}
+
+    \noindent Next, we will prove the statement \textquote{If $ z $ is purely real or purely imaginary, then $ (\overline{z})^2 = z^2 $}. Assume that $ z $ is purely real or purely imaginary. Then there are two cases to consider:
+
+    \noindent \textbf{Case 1. $ z $ is purely real:} If $ z $ is purely real, then it can be written as $ z = a + bi $ for $ a, b \in \mathbb{R} $ and $ b = 0 $. Notice that $ z = a + 0i = a $. Then, we can obtain
+    \[
+        (\overline{z})^2 = (a - 0i)^2 = a^2 = (a + 0i)^2 = z^2.
+    \]
+    
+    \noindent \textbf{Case 2. $ z $ is purely imaginary:} If $ z $ is purely imaginary, then $ z $ can be written as $ z = a + bi $ for $ a, b \in \mathbb{R} $ and $ a = 0, b \neq 0 $. Notice that $ z = 0 + bi = bi $. Then, we can obtain
+    \[
+        (\overline{z})^2 = (0 - bi)^2 = -b^2 = (0 + bi)^2 = z^2.
+    \]
+
+    \noindent Thus, in both cases, $ (\overline{z})^2 = z^2 $.
+
+    \noindent Since we have proven both conditional statements, we can conclude that the biconditional statement must be true.
+\end{proof}
+
+\section*{Question 3a.}
+
+\noindent Let $ z = a + bi $ and $ w = c + di $ for $ a, b, c, d \in \mathbb{R} $. Then,
+\[
+    \abs*{z \cdot w} = \abs*{(a + bi)(c + di)} = \abs*{ac + adi + bci + bdi^2} = \abs*{ac - bd + (ad + bc)i}
+\]
+\[
+    = \sqrt{(ac - bd)^2 + (ad + bc)^2} = \sqrt{a^2c^2 - 2abcd + b^2d^2 + a^2d^2 + 2abcd + b^2c^2}
+\]
+\[
+    = \sqrt{a^2c^2 + b^2d^2 + a^2d^2 + b^2c^2} = \sqrt{(a^2 + b^2)(c^2 + d^2)}.
+\]
+Notice that
+\[
+    \abs*{z} \cdot \abs*{w} = \sqrt{a^2 + b^2} \sqrt{c^2 + d^2} = \sqrt{(a^2 + b^2)(c^2 + d^2)}.
+\]
+
+\noindent Therefore, $ \abs*{z \cdot w} = \abs*{z} \cdot \abs*{w} $.
+
+\section*{Question 3b.}
+
+\noindent Let $ z = r_1e^{i\theta_1} $ and $ w = r_2e^{i\theta_2} $ for $ r_1, r_2, \theta_1, \theta_2 \in \mathbb{R} $. Then,
+\[
+    \abs*{z \cdot w} = \abs*{r_1e^{i\theta_1} \cdot r_2e^{i\theta_2}} = \abs*{r_1r_2e^{i\theta_1 + i\theta_2}} = \abs*{r_1r_2e^{i(\theta_1 + \theta_2)}}
+\]
+\[
+    = \sqrt{r_1^2r_2^2\cos^2(\theta_1 + \theta_2) + r_1^2r_2^2\sin^2(\theta_1 + \theta_2)}
+\]
+\[
+    = \sqrt{r_1^2r_2^2(\cos^2(\theta_1 + \theta_2) + \sin^2(\theta_1 + \theta_2))} = r_1r_2.
+\]
+Notice that
+\[
+    \abs*{z} \cdot \abs*{w} = \abs*{r_1e^{i\theta_1}} \cdot \abs*{r_2e^{i\theta_2}} = \sqrt{r_1^2\cos^2\theta_1 + r_1^2\sin^2\theta_1} \sqrt{r_2^2\cos^2\theta_2 + r_2^2\sin^2\theta_2}
+\]
+\[
+    \sqrt{r_1^2(\cos^2\theta_1 + \sin^2\theta_1)} \sqrt{r_2^2(\cos^2\theta_2 + \sin^2\theta_2)} = r_1r_2.
+\]
+
+\noindent Therefore, $ \abs*{z \cdot w} = \abs*{z} \cdot \abs*{w} $.
+
+\section*{Question 4a.}
+\begin{proof}
+    We will show that $ \overline{z + w} = \overline{z} + \overline{w} $. Let $ z = a + bi $ and $ w = c + di $ for $ a, b, c, d \in \mathbb{R} $. Then, $ \overline{z + w} $ can be written as follows:
+    \[
+        \overline{z + w} = \overline{a + bi + c + di}  = \overline{a + c + (b + d)i} = a + c - (b + d)i.
+    \]
+    Notice that
+    \[
+        \overline{z} + \overline{w} = \overline{a + bi} + \overline{c + di} = a - bi + c - di = a + c - (b + d)i.
+    \]
+    Thus, $ \overline{z + w} = \overline{z} + \overline{w} $.
+\end{proof}
+
+\section*{Question 4b.}
+\begin{proof}
+    We will show that $ \overline{z \cdot w} = \overline{z} \cdot \overline{w} $. Let $ z = a + bi $ and $ w = c + di $ for $ a, b, c, d \in \mathbb{R} $. Then $ \overline{z \cdot w} $ can be written as follows: 
+    \[
+        \overline{z \cdot w} = \overline{(a + bi)(c + di)} = \overline{ac + adi + bci + bdi^2} = \overline{ac - bd + (ad + bc)i}
+    \]
+    \[
+        = ac - bd - (ad + bc)i.
+    \]
+    Notice that
+    \[
+        \overline{z} \cdot \overline{w} = \overline{a + bi} \cdot \overline{c + di} = (a - bi)(c - di) = ac - adi - bci + bdi^2
+    \]
+    \[
+        = ac - bd - (ad + bc)i.
+    \]
+    Thus, $ \overline{z \cdot w} = \overline{z} \cdot \overline{w} $.
+\end{proof}
+
+\section*{Question 4c.}
+\begin{proof}
+    We will show that $ \overline{z^n} = (\overline{z})^n $ for $ n \in \mathbb{N} $. Notice that $ \overline{z^n} $ can be written as $ \overline{z^n} = \overline{z \cdot z^{n-1}} $. Similarly, $ (\overline{z})^n $ can be written as $ (\overline{z})^n = \overline{z} \cdot \overline{z^{n - 1}} $. Since $ \overline{a \cdot b} = \overline{a} \cdot \overline{b} $, $ \overline{z \cdot z^{n - 1}} = \overline{z} \cdot \overline{z^{n - 1}} \Rightarrow \overline{z^n} = (\overline{z})^n $.
+\end{proof}
+
+\section*{Question 4d.}
+\begin{proof}
+    Given the polynomial $ p(z) = a_n z^n + a_{n - 1} z^{n - 1} + ... + a_1 z + a_0 $ with real coefficients, we will prove the statement \textquote{If $ p(w) = 0 $, then $ p(\overline{w}) = 0 $ for $ w \in \mathbb{C} $.} Assume that $ p(w) = 0 $. Notice that
+    \[
+        p(\overline{w}) = a_n (\overline{w})^n + a_{n - 1} (\overline{w})^{n - 1} + ... + a_1 \overline{w} + a_0
+    \]
+    \[
+        = a_n \overline{w^n} + a_{n - 1} \overline{w^{n - 1}} + ... + a_1 \overline{w} + a_0
+    \]
+    \[
+        = \overline{a_n w^n} + \overline{a_{n - 1} w^{n - 1}} + ... + \overline{a_1 w} + \overline{a_0}
+    \]
+    \[
+        = \overline{a_n w^n + a_{n - 1} w^{n - 1} + ... + a_1 w + a_0}.
+    \]
+    Since $ p(w) = a_n w^n + a_{n - 1} w^{n - 1} + ... + a_1 w + a_0 = 0 $, $ p(\overline{w}) $ can be written as
+    \[
+        p(\overline{w}) = \overline{a_n w^n + a_{n - 1} w^{n - 1} + ... + a_1 w + a_0} = \overline{0 + 0i} = 0 - 0i = 0.
+    \]
+
+    \noindent Thus, if $ p(w) = 0 $, then $ p(\overline{w}) = 0 $ for $ w \in \mathbb{C} $.
+\end{proof}
 \end{document}
