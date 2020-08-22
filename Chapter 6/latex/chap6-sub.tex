@@ -8,5 +8,96 @@
 
 \begin{document}
 \section*{Question 1.}
+\begin{proof}
+    Consider the statement $ A(n) $ given by
+    \[
+        \sum_{j=0}^n r^j = \frac{1 - r^{n + 1}}{1 - r}.
+    \]
+    We will use mathematical induction to show that $ A(n) $ is true for all $ n \geq 0 $. First, we will confirm that the base case $ A(0) $ is true. Since
+    \[
+        \sum_{j=0}^0 r^j = r^0 = 1 = \frac{1 - r}{1 - r} = \frac{1 - r^{0 + 1}}{1 - r},
+    \]
+    $ A(0) $ is indeed true.
+
+    \noindent Next, we will perform the inductive step. Assume that $ A(k) $ is true for some $ k \geq 0 $. Thus, we assume
+    \[
+        \sum_{j=0}^k r^j = \frac{1 - r^{k + 1}}{1 - r}.
+    \]
+    We will use this to prove that $ A(k + 1) $ is true. Notice that
+    \[
+        \sum_{j=0}^{k+1} r^j = \left(\sum_{j=0}^k r^j\right) + r^{k+1} = \frac{1 - r^{k+1}}{1 - r} + r^{k+1} = \frac{1 - r^{k+1} + (1 - r)r^{k + 1}}{1 - r}
+    \]
+    \[
+        = \frac{1 - r^{k+1} + r^{k+1} - r^{k+2}}{1 - r} = \frac{1 - r^{k+2}}{1 - r}.
+    \]
+    Thus, using our inductive assumption, we have proven that $ A(k+1) $ is true. By induction, we know that the statement $ A(n) $ is indeed true for all $ n \geq 0 $.
+\end{proof}
+
+\section*{Question 2a.}
+\begin{align*}
+    &f'(x) = -\frac{1}{(1 - x)^2} \cdot -1 = \frac{1}{(1 - x)^2} \\
+    &f''(x) = -2 \cdot \frac{1}{(1 - x)^3} \cdot -1 = \frac{2}{(1 - x)^3} \\
+    &f'''(x) = -3 \cdot \frac{2}{(1 - x)^4} \cdot -1 = \frac{6}{(1 - x)^4} \\
+    &f^{(4)}(x) = -4 \cdot \frac{6}{(1 - x)^5} \cdot -1 = \frac{24}{(1 - x)^5}
+\end{align*}
+
+\noindent From our observations above, it can be conjectured that
+\[
+    f^{(n)}(x) = \frac{n!}{(1 - x)^{n + 1}}.
+\]
+
+\section*{Question 2b.}
+\begin{proof}
+    Consider the statement $ A(n) $ given by
+    \[
+        f^{(n)}(x) = \frac{n!}{(1 - x)^{n + 1}}.
+    \]
+    We will use mathematical induction to show that $ A(n) $ is true for all $ n \geq 0 $. First, we will confirm that the base case $ A(0) $ is true. Since
+    \[
+        f^{(0)}(x) = f(x) = \frac{1}{1 - x} = \frac{0!}{(1 - x)^{0 + 1}},
+    \]
+    $ A(0) $ is indeed true.
+
+    \noindent Next, we will perform the inductive step. Assume that $ A(k) $ is true for some $ k \geq 0 $. Thus, we assume
+    \[
+        f^{(k)}(x) = \frac{k!}{(1 - x)^{k + 1}}.
+    \]
+    We will use this to prove that $ A(k + 1) $ is true. Notice that
+    \[
+        f^{(k+1)}(x) = \dv{x} f^{(k)} (x) = \dv{x} \left( \frac{k!}{(1 - x)^{k + 1}} \right) = k! \dv{x} \left( \frac{1}{(1 - x)^{k + 1}} \right)
+    \]
+    \[
+        = k! \cdot -(k + 1) \cdot \frac{1}{(1 - x)^{k + 2}} \cdot -1 = \frac{(k + 1)!}{(1 - x)^{k + 2}}.
+    \]
+    Thus, using our inductive assumption, we have proven that $ A(k + 1) $ is true. By induction, we know that the statement $ A(n) $ is indeed true for all $ n \geq 0 $.
+\end{proof}
+
+\section*{Question 3.}
+\begin{proof}
+    Consider the statement $ A(n) $ given by
+    \[
+        (1 + x)^n \geq 1 + nx \mbox{, for } x > -1.
+    \]
+    We will use mathematical induction to show that $ A(n) $ is true for all $ n \geq 1 $. First, we will confirm the base case $ A(1) $. Since
+    \[
+        (1 + x)^1 = 1 + x \geq 1 + 1 \cdot x \Rightarrow 1 + x \geq 1 + x \Rightarrow 1 \geq 1,
+    \]
+    $ A(1) $ is indeed true.
+
+    \noindent Next, we will perform the inductive step. Assume that $ A(k) $ is true for some $ k \geq 1 $. Thus, we assume
+    \[
+        (1 + x)^k \geq 1 + kx.
+    \]
+    We will use this to prove that $ A(k + 1) $ is true. Notice that
+    \[
+        (1 + x)^{k + 1} = (1 + x)^k (1 + x) = (1 + x)^k + (1 + x)^k x.
+    \]
+    Since $ (1 + x)^k \geq 1 + kx $, we can rewrite the above expression to obtain
+    \begin{align*}
+        (1 + x)^k + (1 + x)^k x &= 1 + kx + (1 + kx)x = 1 + kx + x + kx^2 \\
+        &= 1 + (k + 1)x + kx^2.
+    \end{align*}
+    Notice that $ 1 + (k + 1)x + kx^2 \geq 1 + (k + 1)x $, since $ kx^2 \geq 0 $. Thus, using our inductive assumption, we have proven that $ A(k + 1) $ is true. By induction, we know that the statement $ A(n) $ is indeed true for all $ n \geq 1 $.
+\end{proof}
 
 \end{document}
