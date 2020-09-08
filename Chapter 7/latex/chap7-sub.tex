@@ -8,5 +8,83 @@
 
 \begin{document}
 \section*{Question 1.}
+\begin{proof}
+    Since $ \mathbb{N} $ is closed under addition, $ a - a = 0 \in \mathbb{N} $. Thus,
+    \[
+        a + b = a + c \Rightarrow a - a + b = a - a + c \Rightarrow 0 + b = 0 + c \Rightarrow b = c.
+    \]
+\end{proof}
 
+\section*{Question 2a.}
+\begin{proof}
+    Let us consider the definition of axiomatic multiplication:
+    \begin{align*}
+        a \cdot 0 &= 0 \\
+        a \cdot S(b) &= a + (a \cdot b).
+    \end{align*}
+    If we wish to perform $ a \cdot 2 $, then we must rewrite it as follows:
+    \[
+        a \cdot S(1) = a + (a \cdot 1).
+    \]
+    To obtain $ a \cdot 1 $, we must rewrite it in a similar fashion:
+    \[
+        a \cdot S(0) = a + (a \cdot 0) = a.
+    \]
+    Therefore, $ a \cdot 2 = a + a $.
+\end{proof}
+
+\section*{Question 2b.}
+\begin{proof}
+    Let us consider the statement $ A(n) $ given by
+    \[
+        \sum_{j=1}^n a = n \cdot a.
+    \]
+    Since the theorem of associativity holds over $ \mathbb{N} $, we can equivalently write $ A(n) $ as follows:
+    \[
+        \sum_{j=1}^n a = a \cdot n.
+    \]
+    We will use mathematical induction to show that $ A(n) $ is true for all $ n \geq 1 $. First, we will confirm that the base case $ A(1) $ is true.
+    Since
+    \[
+        \sum_{j=1}^1 a = a + (a \cdot 0) = a \cdot S(0) = a \cdot 1,
+    \]
+    $ A(1) $ is indeed true.
+
+    \noindent Next, we will perform the inductive step. Assume that $ A(k) $ is true for some $ k \geq 1 $. Thus, we assume that
+    \[
+        \sum_{j=1}^k a = a \cdot k.
+    \]
+    We will use this to prove that $ A(k + 1) $ is true. Notice that
+    \[
+        \sum_{j=1}^{k+1} a = \left(\sum_{j=1}^k a \right) + a = a \cdot k + a = a \cdot (k + 1).
+    \]
+    Thus, using our inductive assumption, we have proven that $ A(k + 1) $ is true. By induction, we know that the statement $ A(n) $ is indeed true for all $ n \geq 1 $.
+\end{proof}
+
+\section*{Question 3a.}
+\begin{proof}
+    We will show that $ b \leq a $. Notice that $ a = b \cdot c $ can be written as $ a = b \cdot S(c - 1) = b + (b \cdot (c - 1)) $. Since $ \mathbb{N} $ is closed under multiplication, $ b \cdot (c - 1) \in \mathbb{N} $. Therefore, $ b + (b \cdot (c - 1)) \in \mathbb{N} $. Thus, because there exists some $ c \in N $ such that $ b + c = a $, we can conclude $ b \leq a $.
+\end{proof}
+
+\section*{Question 3b.}
+\begin{proof}
+    To show that $ a \leq a $, we will prove two conditional statements.
+
+    \noindent First, let us consider the statement \textquote{If $ a \leq a $, then there exists some $ c \in \mathbb{N} $ such that $ a + c = a $.} Assume that $ a \leq a $. Notice that if $ c = 0 $, then the equation $ a + c = a + 0 = a $ is satisfied.
+
+    \noindent Next, let us consider the statement \textquote{If there exists some $ c \in \mathbb{N} $ such that $ a + c = a $, then $ a \leq a $.} Assume that there exists some $ c \in \mathbb{N} $ satisfying $ a + c = a $. Since $ c $ can only be $ 0 $ to satisfy the equation, $ a = a $. Thus, we can conclude that $ a \leq a $.
+
+    \noindent Since we have shown both statements to be true, the biconditional statement is proven.
+\end{proof}
+
+\section*{Question 3c.}
+\begin{proof}
+    Assume that $ a \leq b $ and $ b \leq c $. Then there exists some $ c_1, c_2 \in \mathbb{N} $ such that $ a + c_1 = b $ and $ b + c_2 = c $. Thus, by substituting $ a + c_1 $ for $ b $, we can obtain $ a + c_1 + c_2 = c $. Since $ c_1 + c_2 \in \mathbb{N} $, there exists a $ c_3 = c_1 + c_2 $ such that $ a + c_3 = c $.
+    Because we have that $ a + c_3 = c $, we can conclude that $ a \leq c $.
+\end{proof}
+
+\section*{Question 3d.}
+\begin{proof}
+    Assume that $ a \leq b $ and $ b \leq a $. Then there exists some $ c_1, c_2 \in \mathbb{N} $ such that $ a + c_1 = b $ and $ b + c_2 = a $. Notice that if we substitute $ a + c_1 $ for $ b $, we obtain $ a + c_1 + c_2 = a $. For this equation to be satisfied, both $ c_1 $ and $ c_2 $ must be $ 0 $. Then, $ a + 0 = b $ and $ b + 0 = a $. Thus, we can conclude that $ a = b $.
+\end{proof}
 \end{document}
